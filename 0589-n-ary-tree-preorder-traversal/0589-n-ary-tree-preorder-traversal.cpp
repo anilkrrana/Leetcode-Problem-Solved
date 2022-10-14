@@ -20,14 +20,7 @@ public:
 
 class Solution {
 public:
-    
-    vector<int> preorder(Node* root) {
-        vector<int> res;
-        preorder(root,res);
-        return res;
-    
-    }
-    void preorder(Node* root, vector<int> &res) {
+      void preorder(Node* root, vector<int> &res) {
         if(root == NULL){
             return;
         }
@@ -37,4 +30,12 @@ public:
         }
         return ;
     }
+    
+    vector<int> preorder(Node* root) {
+        vector<int> res;
+        preorder(root,res);
+        return res;
+    
+    }
+  
 };
