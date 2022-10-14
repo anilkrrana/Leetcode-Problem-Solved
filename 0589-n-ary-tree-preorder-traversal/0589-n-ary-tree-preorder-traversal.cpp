@@ -18,9 +18,38 @@ public:
 };
 */
 
+// class Solution {
+// public:
+//       void preorder(Node* root, vector<int> &res) {
+//         if(root == NULL){
+//             return;
+//         }
+//         res.push_back(root->val);
+//         for (Node* ch: root->children) {
+//             preorder(ch,res);
+//         }
+//         return ;
+//     }
+    
+//     vector<int> preorder(Node* root) {
+//         vector<int> res;
+//         preorder(root,res);
+//         return res;
+    
+//     }
+  
+// };
+
+
+
 class Solution {
 public:
-      void preorder(Node* root, vector<int> &res) {
+      vector<int> preorder(Node* root) {
+        vector<int> res;
+        preorder(root,res);
+        return res;
+     }
+    void preorder(Node* root, vector<int> &res) {
         if(root == NULL){
             return;
         }
@@ -29,13 +58,6 @@ public:
             preorder(ch,res);
         }
         return ;
-    }
-    
-    vector<int> preorder(Node* root) {
-        vector<int> res;
-        preorder(root,res);
-        return res;
-    
     }
   
 };
