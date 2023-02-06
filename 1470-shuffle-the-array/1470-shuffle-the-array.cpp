@@ -1,11 +1,21 @@
 class Solution {
 public:
     vector<int> shuffle(vector<int>& nums, int n) {
-        vector <int> ans;
-        for(int i=0; i<n; i++){
-            ans.push_back(nums[i]);
-            ans.push_back(nums[i+n]);
+               int len = nums.size();
+        
+		// to store the pair of numbers in right half of the original array
+        for(int i = n; i < nums.size(); i++) {
+            nums[i] = (nums[i] * 1024) + nums[i - n];
         }
-        return ans;
+        
+        int index = 0;
+		// to retrive values from the pair of numbers and placing those retrieved value at their desired position
+        for(int i = n; i < nums.size(); i++, index += 2) {
+            nums[index] = nums[i] % 1024;
+            nums[index + 1] = nums[i] / 1024;
+        }
+        
+        return nums;
+        
     }   
 };
