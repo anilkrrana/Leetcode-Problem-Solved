@@ -1,27 +1,29 @@
 //{ Driver Code Starts
 #include <bits/stdc++.h>
 using namespace std;
-# define mod 1000000007
 
 // } Driver Code Ends
 
 class Solution{
-    int m=(int)1e9+7;
     public:
-    long long calculatePower(int base, int power) {
-        if(power==0) {
-            return 1;
-        }
-        long long halfPower=calculatePower(base, power>>1);
-        return (power & 1) ? ((((halfPower*halfPower)%m)*base)%m) : ((halfPower*halfPower)%m);
-    }
+    //You need to complete this fucntion
     
-    long long power(int N,int R)
+    long long power(int n,int R)
     {
-       return calculatePower(N, R);
+       //Your code here
+       
+        long long N =n;
+        int mod=(1e9+7);
+        long long ans=1;
+       while(R){
+           if(R%2==0){N=(N*N)%mod; R/=2;}
+           else {ans=(ans*(N)%mod)%mod; R--;}
+       }
+        return ans;
+        
     }
-};
 
+};
 
 //{ Driver Code Starts.
 
