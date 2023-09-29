@@ -8,7 +8,7 @@ var timeLimit = function(fn, t) {
         let funcExec = fn(...args);
         let funcRej = new Promise((resolve, reject) => {
             setTimeout(() => {
-                reject("Time Limit Exceeded")
+                reject("Time Limit Exceeded");
             }, t)
         })
         return Promise.race([funcExec, funcRej])
