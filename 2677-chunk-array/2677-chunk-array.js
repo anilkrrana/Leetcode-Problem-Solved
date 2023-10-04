@@ -8,5 +8,5 @@ var chunk = function(arr, size) {
     for(i=0; i<arr.length; i+=size) {
         result.push(arr.slice(i, i+size))
     }
-    return result
+    return result;
 };
