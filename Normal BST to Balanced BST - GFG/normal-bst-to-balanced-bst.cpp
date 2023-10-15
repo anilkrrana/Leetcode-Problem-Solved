@@ -24,6 +24,7 @@ struct Node
 	Node* left, *right;
 };
 */
+
 class Solution{
     public:
     void inorder(Node *root, vector<int>&nodes){
@@ -48,6 +49,7 @@ class Solution{
     	return createhbst(0, nodes.size()-1,nodes);
     }
 };
+
 
 //{ Driver Code Starts.
 
