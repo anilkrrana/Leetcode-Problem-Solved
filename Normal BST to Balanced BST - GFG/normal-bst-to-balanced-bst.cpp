@@ -50,7 +50,6 @@ class Solution{
     }
 };
 
-
 //{ Driver Code Starts.
 
 Node* insert(struct Node* node, int key){
