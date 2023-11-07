@@ -10,3 +10,7 @@ public:
         return res;
     }
 };
+
+// lets assume that x == 13;
+// so we can, say Pow(x, 13) == pow(x, 1)*pow(x,4)*pow(x,8)
+// so we can use iterative approach
