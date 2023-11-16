@@ -1,10 +1,11 @@
 class Solution {
 public:
     string removeKdigits(string num, int k) {
+        // Using stack
         string ans="";
         for(char &c:num)
         {
-            while(ans.size() && ans.back()>c &&k)
+            while( ans.size() &&  ans.back()>c &&k)
             {
                 ans.pop_back();
                 k--;
@@ -14,7 +15,6 @@ public:
         }
         while(ans.size() &&k--)
         {
-            // ans.push_back();
             ans.pop_back();
         }
         return (ans=="")?"0" :ans;
